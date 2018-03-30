@@ -28,32 +28,61 @@
     }
   }
 }
+.alignC {
+  text-align: center;
+}
 </style>
 <template>
-
-  <div class="login">
+  <div class="login" @keydown.enter="handleSubmit">
     <div class="login-con">
-        <Card>
-            <div slot="title">欢迎登录</div>
-            <div class="form-con">
-                <from>
-                    <Input icon="user" placeholder="请输入..."  />
-                    <Input icon="locked" placeholder="请输入..." />
-                    <Button type="primary">登录</Button>
-                    <p class="login-tip">输入任意用户名和密码即可</p>
-                </from>
-            </div>
-        </Card>
+      <Card :bordered="false">
+        <div slot="title">
+          <p class="alignC">欢迎登录</p>
+        </div>
+        <div class="form-con">
+          <Form ref="loginForm" :model="form" :rules="rules">
+            <FormItem prop="userName">
+              <Input v-model="form.userName" icon="user" placeholder="请输入用户名" />
+            </FormItem>
+            <FormItem prop="password">
+              <Input type="password" v-model="form.password" icon="locked" placeholder="请输入密码" />
+            </FormItem>
+            <FormItem>
+              <Button @click="handleSubmit" type="primary" long="true">登录</Button>
+            </FormItem>
+          </Form>
+          <p class="login-tip">输入任意用户名和密码即可</p>
+        </div>
+      </Card>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'login',
-  data () {
+  name: "login",
+  data() {
     return {
+      form: {
+        userName: "admin",
+        password: ""
+      },
+      rules: {
+        userName: [{ required: true, message: "账号不能为空", trigger: "blur" }],
+        password: [{ required: true, message: "密码不能为空", trigger: "blur" }]
+      }
+    };
+  },
+  methods: {
+    handleSubmit() {
+      this.$refs.loginForm.validate(valid => {
+        if (valid) {
+          this.$router.push({
+           path:'/home'
+          });
+        }
+      });
     }
   }
-}
+};
 </script>

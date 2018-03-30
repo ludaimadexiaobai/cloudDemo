@@ -1,14 +1,14 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
 
-Vue.use(VueRouter);
-
-export default new VueRouter({
-    routes: [
-      {
-        path: '/',
-        name: 'login',
-        component: () => import('./views/login.vue')
-      }
-    ]
-  })
+const routers = [
+  {
+    // 根目录重定向  
+    path: '/login', component: resolve => require(['./views/login.vue'], resolve)
+  },
+  {
+    path: '/home', component: resolve => require(['./views/home.vue'], resolve)
+  },
+  {   // 根目录重定向  
+    path: '/', redirect: '/login'
+  },
+]
+export default routers

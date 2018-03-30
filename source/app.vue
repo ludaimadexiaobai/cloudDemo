@@ -1,11 +1,8 @@
 <style>
 html,body{
-    width: 100%;
     height: 100%;
-    overflow: hidden;
 }
 .app-main{
-    width: 100%;
     height: 100%;
 }
 </style>
@@ -18,7 +15,8 @@ html,body{
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  
 }
 </script>
 
