@@ -8,7 +8,7 @@ Vue.use(VueRouter);
 Vue.use(spui);
 
 const router = new VueRouter({
-    mode: 'history',
+    mode: 'history', // 切换路径模式，变成history模式,不然路径为/#/home 
     routes: routers
 })
 

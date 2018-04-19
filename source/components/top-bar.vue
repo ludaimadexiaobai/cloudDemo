@@ -13,7 +13,7 @@
     }
 }
 .anticon-menu-trigger{line-height: 64px; width: 50px; padding-left: 7px;
-    &:hover{background-color: #e6f7ff;}
+    &:hover{background-color: #e6f7ff; cursor: pointer;}
 }
 </style>
 <script>

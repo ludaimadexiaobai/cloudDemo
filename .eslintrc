@@ -34,6 +34,7 @@
       "no-return-assign": 0,
       "no-shadow": 0,
       "comma-dangle": 0,
-      "camelcase": [2, {"properties": "never"}]
+      "camelcase": [2, {"properties": "never"}],
+      "vue/no-parsing-error": [2, {"x-invalid-end-tag": false }]
     }
   }
