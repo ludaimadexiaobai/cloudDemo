@@ -11,7 +11,8 @@
             <li class="sideLi"><router-link to="/home"><Icon type="home" size="18"></Icon><span class="sideSpan">工作台</span></router-link></li>
             <!-- <li><router-link to="/login">login</router-link></li> -->
         </ul>
-        <a href="#" @click="clickFun" class="toggle-nav"><Icon type="chevron-left" size="12" color="#fff" class="sideBtn"></Icon></a>
+        <a href="#" class="toggle-nav"><Icon type="chevron-left" size="12" color="#fff" class="sideBtn"></Icon></a>
+        <!--  @click="clickFun" -->
     </div>
 </template>
 <style>
