@@ -1,7 +1,8 @@
 <template id="topBar">
-    <div class="topBar">
-        <Icon type="arrow-left" size="30" class="anticon-menu-trigger"></Icon>
-        <div class="pull-r"><a @click="backToLogin">退出登录</a></div>
+    <div class="topBar">        
+        <div class="pull-r">
+            <a @click="backToLogin">退出登录</a>
+        </div>
     </div>
 </template>
 <style>
@@ -9,7 +10,7 @@
 .topBar .pull-r{float: right; }
 .topBar a{line-height: 64px; height: 64px; display: inline-block; padding:0 15px; font-size:14px; color:#474747;}
 .topBar a:hover{background-color: #e6f7ff;}
-.anticon-menu-trigger{line-height: 64px; width: 50px; padding-left: 7px;}
+.anticon-menu-trigger{line-height: 64px; width: 50px; padding-left: 16px;}
 .anticon-menu-trigger:hover{background-color: #e6f7ff; cursor: pointer;}
 </style>
 <script>
