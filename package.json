@@ -1,5 +1,5 @@
 {
-  "name": "vue-webpack-todo",
+  "name": "vue-webpack-iview",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,10 +8,12 @@
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --config webpack.config.js"
   },
-  "author": "itPoet",
+  "author": "schoolPal",
   "license": "ISC",
   "dependencies": {
     "iview": "^2.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
     "vue": "^2.5.13",
     "vue-router": "^3.0.1",
     "webpack": "^4.1.0"
@@ -32,10 +34,15 @@
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.0.4",
     "style-loader": "^0.20.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
     "url-loader": "^0.6.2",
     "vue-loader": "^14.1.1",
     "vue-template-compiler": "^2.5.13",
     "webpack-cli": "^2.0.10",
-    "webpack-dev-server": "^3.1.0"
+    "webpack-dev-server": "^3.1.0",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "postcss-loader": "^2.1.1"
   }
 }
