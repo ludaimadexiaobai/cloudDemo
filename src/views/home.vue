@@ -8,17 +8,19 @@
        <side-nav></side-nav>
        <div class="layout">
             <top-bar></top-bar>
+            <body-content></body-content>
        </div>
     </div>
 </template>
 <script>
 import topBar from '../components/top-bar.vue'
 import sideNav from '../components/side-nav.vue'
+import bodyContent from '../components/body-content.vue'
 
 export default {
   name: "home",
   components:{
-      topBar,sideNav
+      topBar,sideNav,bodyContent
   },
   data() {
     return {};

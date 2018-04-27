@@ -8,7 +8,12 @@
         </div>
         
         <ul class="nav-list">
-            <li class="sideLi"><router-link to="/home"><Icon type="home" size="18"></Icon><span class="sideSpan">工作台</span></router-link></li>
+            <li class="sideLi"><router-link to="/addemailset"><Icon type="ios-gear" size="18"></Icon><span class="sideSpan">添加短信配置</span></router-link></li>
+            <li class="sideLi"><router-link to="/user"><Icon type="person" size="18"></Icon><span class="sideSpan">用户管理</span></router-link></li>
+            <li class="sideLi"><router-link to="/app"><Icon type="android-apps" size="18"></Icon><span class="sideSpan">应用管理</span></router-link></li>
+            <li class="sideLi"><router-link to="/email"><Icon type="email" size="18"></Icon><span class="sideSpan">短信配置</span></router-link></li>
+            <li class="sideLi"><router-link to="/organization"><Icon type="home" size="18"></Icon><span class="sideSpan">机构管理</span></router-link></li>
+            <li class="sideLi"><router-link to="/emailmodel"><Icon type="android-clipboard" size="18"></Icon><span class="sideSpan">短信模板配置</span></router-link></li>
             <!-- <li><router-link to="/login">login</router-link></li> -->
         </ul>
         <a href="#" class="toggle-nav"><Icon type="chevron-left" size="12" color="#fff" class="sideBtn"></Icon></a>
@@ -20,7 +25,7 @@
 .sideNav.open {flex: 0 0 230px; max-width: 230px; min-width: 230px; width: 230px;}
 .sideNav.close {flex: 0 0 52px; max-width: 52px; min-width: 52px; width: 52px;}
 .sideSpan{display:none;}
-.nav-list{padding-top: 30px;}
+.nav-list{padding-top: 20px;}
 .sideLi{height: 40px; line-height: 40px; padding-left: 20px; font-size:14px; color:#fff; cursor: pointer;}
 .sideLi a{color:#aaa;}
 .sideLi.active a{color:#fff;}
