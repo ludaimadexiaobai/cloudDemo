@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './app.vue'
 import routers from './router.js'
 import VueRouter from 'vue-router'
-import './assets/styles/style.css'
+import './assets/styles/reset.less';
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 

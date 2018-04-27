@@ -27,16 +27,18 @@ const config= {
                 test: /\.css$/,
                 use:[
                     'style-loader',
-                    'css-loader'
+                    'css-loader',
+                    'postcss-loader'
                 ]
             },
             {
-                test: /\.styl/,
-                use: [
+               test: /\.less$/,
+               use: [
                     'style-loader',
                     'css-loader',
-                    'stylus-loader'
-                    ]
+                   'less-loader',
+                   'postcss-loader'
+                ]            
             },
             {
                 test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
