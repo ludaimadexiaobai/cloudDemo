@@ -6,7 +6,13 @@
                  <Button @click="handleRender">添加一行信息</Button>    
            </span>
         </p>
-        <Table stripe :columns="columns1" :data="data1"></Table>
+        <detail-table></detail-table>
+        <div class="searchTableBox">
+            <search-table></search-table>
+        </div>
+        <div class="pagTableBox">
+            <pag-table></pag-table>
+        </div>
     </div>
 </template>
 
@@ -15,54 +21,22 @@
 .title{ height:45px; padding:5px 20px; border:1px #dddee1 solid; border-bottom:none; font-size:20px; background: #f8f8f8; }
 .titleBtn{display: inline-block; vertical-align: middle; margin:0 10px;}
 .titleContent{ display: inline-block; vertical-align: middle;}
+.searchTableBox,.pagTableBox{margin-top:20px;}
+.pagTableBox{ background: #fff; padding-bottom: 1px;}
 </style>
 <script>
+import detailTable from './table/detail-table.vue'
+import searchTable from './table/search-table.vue'
+import pagTable from './table/pag-table.vue'
+
+
 export default {
   name: 'body-content',
+  components:{
+      detailTable,searchTable,pagTable,
+  },
   data () {
-      return{
-          columns1: [
-                    {
-                        title: 'Name',
-                        key: 'name'
-                    },
-                    {
-                        title: 'Age',
-                        key: 'age'
-                    },
-                    {
-                        title: 'Address',
-                        key: 'address'
-                    }
-                ],
-                data1: [
-                    {
-                        name: 'John Brown',
-                        age: 18,
-                        address: 'New York No. 1 Lake Park',
-                        date: '2016-10-03'
-                    },
-                    {
-                        name: 'Jim Green',
-                        age: 24,
-                        address: 'London No. 1 Lake Park',
-                        date: '2016-10-01'
-                    },
-                    {
-                        name: 'Joe Black',
-                        age: 30,
-                        address: 'Sydney No. 1 Lake Park',
-                        date: '2016-10-02'
-                    },
-                    {
-                        name: 'Jon Snow',
-                        age: 26,
-                        address: 'Ottawa No. 2 Lake Park',
-                        date: '2016-10-04'
-                    }
-                ]
-
-            
+      return{            
       }
   },
    methods: {
