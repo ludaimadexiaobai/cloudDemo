@@ -11,6 +11,12 @@ Vue.use(iView)
 
 const root = document.createElement('div')
 document.body.appendChild(root)
+
+if (module.hot) {
+    module.hot.accept();
+  } 
+  // 解决应用pag-table.vue页面bug                              
+  
 const router = new VueRouter({
     /*mode: 'history', // 切换路径模式，变成history模式,不然路径为/#/home  
     scrollBehavior: () => ({ // 滚动条滚动的行为，不加这个默认就会记忆原来滚动条的位置  
